@@ -1,0 +1,8 @@
+<app-todos (toggle)="toggleTodo($event)" [todos]="todos | async"></app-todos>
+
+<app-filters [filters]="filters"
+         [active]="activeFilter$ | async"
+         (changeFilter)="changeFilter($event)">
+</app-filters>
+
+<app-add-todo (add)="addTodo($event)" [reset]="addTodoSuccess$ | async" (changeFilter)="changeFilter($event)"></app-add-todo>

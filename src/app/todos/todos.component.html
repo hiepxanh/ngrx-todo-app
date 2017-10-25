@@ -1,0 +1,5 @@
+<p *ngIf="todos.pending">Loading...</p>
+<app-todo (toggle)="toggle.next($event)" [todo]="todo"
+      *ngFor="let todo of todos.data">
+</app-todo>
+<p *ngIf="todos.error">{{todos.error}}</p>

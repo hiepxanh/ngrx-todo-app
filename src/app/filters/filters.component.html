@@ -1,0 +1,3 @@
+ <select [formControl]="filter" (change)="changeFilter.next(filter.value)">
+    <option *ngFor="let filter of filters" [ngValue]="filter.id">{{filter.title}}</option>
+  </select>
